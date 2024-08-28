@@ -15,3 +15,10 @@ def test_add_handle_single():
 def test_handle_two_values() : 
     result = add("1,5")
     assert  result == 6 
+
+
+'''handle n number to add'''
+
+def test_handle_n_number ():
+    result = add("1,2,3,4")
+    assert result == 10
