@@ -22,3 +22,8 @@ def test_handle_two_values() :
 def test_handle_n_number ():
     result = add("1,2,3,4")
     assert result == 10
+
+'''handle new lines'''
+def test_handle_newline():
+    result = add("1\n,2,3")
+    assert result == 6
