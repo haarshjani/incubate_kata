@@ -1,7 +1,8 @@
 
 
 def add(number):
-    pass
+    
+    numbers = number.split(",")
 
-if __name__ == '__main__':
-    add()
+    return int(numbers[0]) + int(numbers[1])
+
