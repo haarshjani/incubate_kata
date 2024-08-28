@@ -34,7 +34,10 @@ def test_handle_dynamic_deliminator():
     assert result == 3
 
 '''handle negative numbers'''
-
 def test_handle_negative_numbers():
-    result = add("1,2,3,-5")
-    assert result == 6
+        with pytest.raises(ValueError):
+             add("1,2,3,4,-5")
+            
+                  
+
+    

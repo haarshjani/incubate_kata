@@ -4,6 +4,7 @@ def add(number):
     
     result = 0
     deliminator = ","
+    negatives = []
 
     deliminator_re = re.search("//(.*)\n",number)
     if deliminator_re :
@@ -18,7 +19,12 @@ def add(number):
     # elif(len(numbers) == 1):
     #     return int(numbers[0])
     for x in numbers:
+       if(int(x) < 0):
+           negatives.append(x)
        result += int(x)
-
+       
+    if(len(negatives) > 0) :
+        raise ValueError("negative numbers not allowed" + ','.join(negatives))
+        
     return result
 
