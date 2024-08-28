@@ -32,3 +32,9 @@ def test_handle_newline():
 def test_handle_dynamic_deliminator():
     result = add("//;\n1;2")
     assert result == 3
+
+'''handle negative numbers'''
+
+def test_handle_negative_numbers():
+    result = add("1,2,3,-5")
+    assert result == 6
