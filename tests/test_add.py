@@ -28,6 +28,7 @@ def test_handle_newline():
     result = add("1\n,2,3")
     assert result == 6
 
+'''handle dynamic deliminator'''
 def test_handle_dynamic_deliminator():
     result = add("//;\n1;2")
     assert result == 3

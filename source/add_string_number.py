@@ -1,9 +1,17 @@
-
+import re
 
 def add(number):
     
-    numbers = number.split(",")
     result = 0
+    deliminator = ","
+
+    deliminator_re = re.search("//(.*)\n",number)
+    if deliminator_re :
+        deliminator = deliminator_re.group(1)
+        deliminator_to_remove = "//"+deliminator+"\n"
+        number = number.replace(deliminator_to_remove,'')
+
+    numbers = number.split(deliminator)
 
     if(len(number) == 0):
         return result
